@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/questionListFragment">
+
+    <fragment
+        android:id="@+id/questionListFragment"
+        android:name="ir.mohammadhf.karafsquiz.feature.QuestionListFragment"
+        android:label="fragment_select_question"
+        tools:layout="@layout/fragment_select_question">
+        <action
+            android:id="@+id/action_questionListFragment_to_questionTwoFragment"
+            app:destination="@id/questionTwoFragment" />
+        <action
+            android:id="@+id/action_questionListFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment" />
+        <action
+            android:id="@+id/action_questionListFragment_to_questionThreeFragment"
+            app:destination="@id/questionThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionTwoFragment"
+        android:name="ir.mohammadhf.karafsquiz.feature.two.QuestionTwoFragment"
+        android:label="fragment_question_two"
+        tools:layout="@layout/fragment_question_two" />
+    <fragment
+        android:id="@+id/questionOneFragment"
+        android:name="ir.mohammadhf.karafsquiz.feature.one.QuestionOneFragment"
+        android:label="fragment_question_one"
+        tools:layout="@layout/fragment_question_one" />
+    <fragment
+        android:id="@+id/questionThreeFragment"
+        android:name="ir.mohammadhf.karafsquiz.feature.three.QuestionThreeFragment"
+        android:label="fragment_question_three"
+        tools:layout="@layout/fragment_question_three" />
+</navigation>

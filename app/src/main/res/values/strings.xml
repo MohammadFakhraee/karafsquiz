@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Karafs Quiz</string>
+    <string name="question_two">Question Two</string>
+    <string name="question_one">Question One</string>
+    <string name="question_three">Question Three</string>
+
+    <string name="is_related_to">is related to</string>
+    <string name="no_one">no one.</string>
+    <string name="ampersand">&amp;</string>
+    <string name="comma">,</string>
+    <string name="dot">.</string>
+
+    <string name="cm">سانتی متر</string>
+    <string name="inches">اینچ</string>
+</resources>
