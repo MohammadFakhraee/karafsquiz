@@ -1,6 +1,7 @@
 package ir.mohammadhf.karafsquiz.core
 
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import io.reactivex.disposables.CompositeDisposable
 
 // Base fragment which will be extended from other fragments.
@@ -11,5 +12,13 @@ open class BaseFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         compositeDisposable.clear()
+    }
+
+    fun makeSnack(message: String) {
+        Snackbar.make(
+            requireView(),
+            message,
+            Snackbar.LENGTH_LONG
+        ).show()
     }
 }

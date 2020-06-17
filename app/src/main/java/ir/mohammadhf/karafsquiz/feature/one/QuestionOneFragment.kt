@@ -56,7 +56,12 @@ class QuestionOneFragment : BaseFragment() {
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(context, "error", Toast.LENGTH_SHORT).show()
+                    makeSnack(
+                        ServiceProvider.provideMessageInjector().injectMessage(
+                            e,
+                            requireContext()
+                        )
+                    )
                 }
 
             })

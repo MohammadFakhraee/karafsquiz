@@ -5,6 +5,7 @@ import androidx.room.Room
 import ir.mohammadhf.karafsquiz.DataFakeGenerator
 import ir.mohammadhf.karafsquiz.model.repo.NumRepository
 import ir.mohammadhf.karafsquiz.model.repo.PersonsRepository
+import ir.mohammadhf.karafsquiz.service.factory.ExceptionMessageFactory
 import ir.mohammadhf.karafsquiz.service.factory.QuestionOneViewModelFactory
 import ir.mohammadhf.karafsquiz.service.factory.QuestionTwoViewModelFactory
 import ir.mohammadhf.karafsquiz.service.person.AppDatabase
@@ -68,4 +69,7 @@ object ServiceProvider {
 
     fun provideQuestionOneViewModelFactory(): QuestionOneViewModelFactory =
         QuestionOneViewModelFactory(NumRepository(DataFakeGenerator))
+
+    fun provideMessageInjector(): ExceptionMessageFactory =
+        ExceptionMessageFactory
 }
